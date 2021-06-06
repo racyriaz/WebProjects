@@ -27,21 +27,56 @@
             <li><a href="#">hamburger</a></li>
         </ul>
     </header>
-    <section>
-        <img id="bg" class="Zbackground" src="./SVG/bg.svg" alt="Evening sky.">
+    <section class="F">
+        <img id="bg" src="./SVG/bg.svg" alt="Evening sky.">
         <div id="Zcontent">
-            <h1>Welcome to our home page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur.</p>
+            <h1 id="title">Welcome to our home page</h1>
+            <p id="subTitle">Lorem ipsum dolor sit amet, consectetur.</p>
             <button>JOIN NOW</button>
         </div>
-        <img class="Zbackground" src="./SVG/mountain-01.svg" alt="Mountain.">
-        <img class="Zbackground" src="./SVG/leftT-01.svg" alt="Green bushes and trees near mountain.">
-        <img class="Zbackground" src="./SVG/rightT-01.svg" alt="Green bushes and trees near mountain.">
+        <img id="mountain" src="./SVG/mountain-01.svg" alt="Mountain.">
+        <img id="Lt" src="./SVG/leftT-01.svg" alt="Green bushes and trees near mountain.">
+        <img id="Rt" src="./SVG/rightT-01.svg" alt="Green bushes and trees near mountain.">
     </section>
-    <h1>asdfsdfasdfasdf asdf asdf asd fa dsf </h1>
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nesciunt molestias aspernatur ipsum adipisci est sed repellendus eos odit ut, magnam consequatur architecto perferendis quia earum officia mollitia tempora obcaecati!</p>
+    <section class="S">
+        <h1>Parallax scrolling effect</h1>
+        <p>Commodo sunt in ullamco quis irure. Cupidatat aute Lorem qui ea ex Lorem. Magna do excepteur nisi laborum Lorem adipisicing commodo laborum pariatur reprehenderit. Laborum labore ad veniam enim et sit elit ut minim ea aliqua. Laboris deserunt
+            in enim elit ea minim elit laborum veniam non laborum. Qui velit laboris exercitation et. Velit labore pariatur sit reprehenderit non anim voluptate ipsum incididunt laboris do occaecat nostrud anim. Incididunt labore irure culpa velit magna.
+            <br><br> Ipsum sint culpa laboris consectetur culpa mollit. Occaecat id ea veniam qui elit ut. Minim ipsum ea sit do fugiat pariatur tempor deserunt cillum minim reprehenderit adipisicing. Sunt et adipisicing in sint officia Lorem proident
+            amet consectetur exercitation tempor consectetur. Laboris nostrud eu proident voluptate id officia. Sit aliquip laboris id magna in qui duis dolor duis nisi exercitation. <br><br> Enim consectetur pariatur duis quis magna Lorem excepteur eiusmod
+            irure qui occaecat consectetur. Ullamco non dolor sit amet labore proident. Adipisicing ex occaecat pariatur aute sint non est velit eu magna. Do laboris eu incididunt culpa. Lorem dolor sit pariatur proident veniam minim anim nisi do elit
+            laboris exercitation duis. <br><br> Sunt aliquip mollit non ipsum veniam fugiat velit mollit anim reprehenderit excepteur aute aute. Ullamco eu commodo dolor officia irure in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+            quasi! Deserunt, accusamus fugit perspiciatis id reiciendis est maxime, temporibus a assumenda quo nemo illum veniam cupiditate, soluta ipsum nobis deleniti. Ullamco eu commodo dolor officia irure in. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Distinctio, quasi!</p> <br><br>
+        <p>Commodo sunt in ullamco quis irure. Cupidatat aute Lorem qui ea ex Lorem. Magna do excepteur nisi laborum Lorem adipisicing commodo laborum pariatur reprehenderit. Laborum labore ad veniam enim et sit elit ut minim ea aliqua. Laboris deserunt
+            in enim elit ea minim elit laborum veniam non laborum. Qui velit laboris exercitation et. Velit labore pariatur sit reprehenderit non anim voluptate ipsum incididunt laboris do occaecat nostrud anim. Incididunt labore irure culpa velit magna.
+            Ipsum sint culpa laboris consectetur culpa mollit. Occaecat id ea veniam qui elit ut. Minim ipsum ea sit do fugiat pariatur tempor deserunt cillum minim reprehenderit adipisicing. Sunt et adipisicing in sint officia Lorem proident amet consectetur
+            exercitation tempor consectetur. Laboris nostrud eu proident voluptate id officia. Sit aliquip laboris id magna in qui duis dolor duis nisi exercitation. <br><br> Enim consectetur pariatur duis quis magna Lorem excepteur eiusmod irure qui
+            occaecat consectetur. Ullamco non dolor sit amet labore proident. Adipisicing ex occaecat pariatur aute sint non est velit eu magna. Do laboris eu incididunt culpa. Lorem dolor sit pariatur proident veniam minim anim nisi do elit laboris exercitation
+            duis. Sunt aliquip mollit non ipsum veniam fugiat velit mollit anim reprehenderit excepteur aute aute. Ullamco eu commodo dolor officia irure in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quasi! Deserunt, accusamus
+            fugit perspiciatis id reiciendis est maxime, temporibus a assumenda quo nemo illum veniam cupiditate, soluta ipsum nobis deleniti. Ullamco eu commodo dolor officia irure in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+            quasi!
+        </p>
     </section>
+
+    <script>
+        let mountain = document.getElementById('mountain');
+        let leftTree = document.getElementById('Lt');
+        let rightTree = document.getElementById('Rt');
+        let content = document.getElementById('Zcontent')
+        let subTitle = document.getElementById('subTitle')
+        let button = document.getElementsByTagName('button')
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            leftTree.style.left = -value * 0.65 + 'px';
+            rightTree.style.left = value * 0.85 + 'px';
+            console.log(value);
+            if (value < 800) {
+                content.style.top = value + 'px';
+            }
+        })
+    </script>
 
 </body>
 
